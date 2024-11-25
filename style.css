@@ -46,13 +46,3 @@ button {
     padding: 10px;
     font-size: 18px;
 }
-
-#scoreboard {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    background-color: #f0f0f0;
-    padding: 10px;
-}

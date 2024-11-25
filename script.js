@@ -73,13 +73,3 @@ function playGame() {
     document.getElementById("computer-choice").innerText = "Computer's choice: " + computerChoice;
 }
 
-
-function updatePlayerScore() {
-    playerScore++;
-    document.getElementById("player-score").textContent = playerScore;
-}
-
-function updateComputerScore() {
-    computerScore++;
-    document.getElementById("computer-score").textContent = computerScore;
-}
