@@ -7,9 +7,6 @@ const choices = ["Rock", "Paper", "Scissors"];
 const randomIndex = Math.floor(Math.random() * choices.length);
 const computerChoice = choices[randomIndex];
 
-let playerScore = 0;
-let computerScore = 0;
-
 document.getElementById("computer-choice").innerText = "Computer's choice: " + computerChoice;
 
 document.getElementById("rock-button").addEventListener("click", () =>{
@@ -72,4 +69,24 @@ function playGame() {
     document.getElementById("winner").innerText = "Winner: " + result;
     document.getElementById("computer-choice").innerText = "Computer's choice: " + computerChoice;
 }
+
+let playerScore = 0;
+let computerScore = 0;
+
+if (playerChoice === computerChoice) {
+    result = "It's a draw!";
+} else if (
+    (playerChoice === "Rock" && computerChoice === "Scissors") ||
+    (playerChoice === "Paper" && computerChoice === "Rock") ||
+    (playerChoice === "Scissors" && computerChoice === "Paper")
+) {
+    result = "Player wins!";
+    playerScore += 1;
+} else {
+    result = "Computer wins!";
+    computerScore += 1;
+}
+
+document.getElementById("player-score").innerText = "Player Score: " + playerScore;
+document.getElementById("computer-score").innerText = "Computer Score: " + computerScore;
 
