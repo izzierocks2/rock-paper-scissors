@@ -62,8 +62,10 @@ function playGame() {
         (playerChoice === "Scissors" && computerChoice === "Paper")
     ) {
         result = "Player wins!";
+        playerScore += 1;
     } else {
         result = "Computer wins!";
+        computerScore += 1;
     }
 
     document.getElementById("winner").innerText = "Winner: " + result;
@@ -72,21 +74,3 @@ function playGame() {
 
 let playerScore = 0;
 let computerScore = 0;
-
-if (playerChoice === computerChoice) {
-    result = "It's a draw!";
-} else if (
-    (playerChoice === "Rock" && computerChoice === "Scissors") ||
-    (playerChoice === "Paper" && computerChoice === "Rock") ||
-    (playerChoice === "Scissors" && computerChoice === "Paper")
-) {
-    result = "Player wins!";
-    playerScore += 1;
-} else {
-    result = "Computer wins!";
-    computerScore += 1;
-}
-
-document.getElementById("player-score").innerText = "Player Score: " + playerScore;
-document.getElementById("computer-score").innerText = "Computer Score: " + computerScore;
-
