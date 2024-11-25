@@ -14,7 +14,7 @@
     text-align: center;
 }
 
-.player-box{
+/*.player-box{
     border: 2px solid;
     border-radius: 20px;
     width: 350px;
@@ -22,9 +22,9 @@
     margin: 100px;
     justify-content: flex-end;
     margin-left: auto;
-}
+}*/
 
-.computer-box{
+/*.computer-box{
     border: 2px solid;
     border-radius: 20px;
     width: 350px;
@@ -32,7 +32,7 @@
     float: right;
     margin: 100px;
     margin-right: auto;
-}
+}*/
 
 .whole-container{
     display: flex;
@@ -45,4 +45,14 @@ button {
     height: 50px;
     padding: 10px;
     font-size: 18px;
+}
+
+#scoreboard {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 10px;
 }

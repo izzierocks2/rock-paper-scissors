@@ -7,6 +7,9 @@ const choices = ["Rock", "Paper", "Scissors"];
 const randomIndex = Math.floor(Math.random() * choices.length);
 const computerChoice = choices[randomIndex];
 
+let playerScore = 0;
+let computerScore = 0;
+
 document.getElementById("computer-choice").innerText = "Computer's choice: " + computerChoice;
 
 document.getElementById("rock-button").addEventListener("click", () =>{
@@ -25,8 +28,12 @@ document.getElementById("rock-button").addEventListener("click", () => {
     document.getElementById("player-choice").innerHTML = '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYKDxVCDnbHAalbHXiwbPD5lP6qTLl8JHOtg&s" alt="Rock">';
 });
 
-document.getElementById("paper-button").addEventListener("click", () =>{
-    document.getElementById("player-choice").innerHTML = '<img src="https://as1.ftcdn.net/v2/jpg/01/30/82/92/1000_F_130829242_7RUj2Q4CLzvLZEnKIlvVZNGO9XbSUjES.jpg" alt="Paper";
+document.getElementById("paper-button").addEventListener("click", () => {
+    document.getElementById("player-choice").innerHTML = '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTva4CkAMq-prLxeljuSOYXh1gXzyGs8D7e0Q&s" alt="Paper">';
+});
+
+document.getElementById("scissors-button").addEventListener("click", () => {
+    document.getElementById("player-choice").innerHTML = '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDgGm25cxlzsijnPSy5SQJVwG-TYMuKc4nOQ&s" alt="Paper">';
 });
 
 
@@ -64,4 +71,15 @@ function playGame() {
 
     document.getElementById("winner").innerText = "Winner: " + result;
     document.getElementById("computer-choice").innerText = "Computer's choice: " + computerChoice;
+}
+
+
+function updatePlayerScore() {
+    playerScore++;
+    document.getElementById("player-score").textContent = playerScore;
+}
+
+function updateComputerScore() {
+    computerScore++;
+    document.getElementById("computer-score").textContent = computerScore;
 }
